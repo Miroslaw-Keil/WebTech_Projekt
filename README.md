@@ -1,5 +1,5 @@
 # WebTech_Projekt
-Mitglieder: Miroslaw Keil s0582192, Quang Huy Vien
+Mitglieder: Miroslaw Keil s0582192, Quang Huy Vien s0582406
 
 Projektidee: Personalisiertes Kochbuch.
 
