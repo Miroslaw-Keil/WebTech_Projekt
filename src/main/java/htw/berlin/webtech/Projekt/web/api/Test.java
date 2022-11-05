@@ -1,4 +1,4 @@
-package htw.berlin.webtech.Projekt;
+package htw.berlin.webtech.Projekt.web;
 
 import java.io.File;
 
