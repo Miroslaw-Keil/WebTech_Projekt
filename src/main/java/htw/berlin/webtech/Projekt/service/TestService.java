@@ -2,7 +2,7 @@ package htw.berlin.webtech.Projekt.service;
 
 
 import htw.berlin.webtech.Projekt.persistence.TestEntity;
-import htw.berlin.webtech.Projekt.persistence.TestRepository;
+import htw.berlin.webtech.Projekt.persistence.ITestRepository;
 import htw.berlin.webtech.Projekt.web.api.Test;
 import org.springframework.stereotype.Service;
 
@@ -12,9 +12,9 @@ import java.util.stream.Collectors;
 @Service
 public class TestService {
 
-    private final TestRepository testRepository;
+    private final ITestRepository testRepository;
 
-    public TestService(TestRepository testRepository) {
+    public TestService(ITestRepository testRepository) {
         this.testRepository = testRepository;
     }
 
