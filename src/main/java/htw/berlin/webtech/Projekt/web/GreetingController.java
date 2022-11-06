@@ -1,4 +1,4 @@
-package htw.berlin.webtech.Projekt.web.api;
+package htw.berlin.webtech.Projekt.web;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

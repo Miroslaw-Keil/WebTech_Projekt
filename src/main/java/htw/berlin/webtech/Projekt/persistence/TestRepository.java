@@ -1,2 +1,5 @@
-package htw.berlin.webtech.Projekt.persistence;public class TestRepository {
+package htw.berlin.webtech.Projekt.persistence;
+
+
+public interface TestRepository {
 }
