@@ -22,13 +22,20 @@ public class TestService {
     public List<Test> findAll() {
         List<TestEntity> tests = testRepository.findAll();
         return tests.stream()
-                .map(testEntity -> new Test(
-                        testEntity.getId(),
-                        testEntity.getName(),
-                        testEntity.getZubereitungsdauer(),
-                        testEntity.isVegan(),
-                        testEntity.getTageszeit())
-                )
+                .map(this::tranformEntity)
+
                 .collect(Collectors.toList());
+    }
+
+
+    private Test tranformEntity(TestEntity testEntity) {
+        return new Test(
+                testEntity.getId(),
+                testEntity.getName(),
+                testEntity.getZubereitungsdauer(),
+                testEntity.isVegan(),
+                testEntity.getTageszeit()
+
+        );
     }
 }
