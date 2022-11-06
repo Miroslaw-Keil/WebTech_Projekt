@@ -4,6 +4,7 @@ package htw.berlin.webtech.Projekt.service;
 import htw.berlin.webtech.Projekt.persistence.TestEntity;
 import htw.berlin.webtech.Projekt.persistence.ITestRepository;
 import htw.berlin.webtech.Projekt.web.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -12,12 +13,13 @@ import java.util.stream.Collectors;
 @Service
 public class TestService {
 
-    private final ITestRepository testRepository;
+    @Autowired
+    ITestRepository testRepository;
 
-    public TestService(ITestRepository testRepository) {
+/*    public TestService(ITestRepository testRepository) {
         this.testRepository = testRepository;
     }
-
+*/
 
     public List<Test> findAll() {
         List<TestEntity> tests = testRepository.findAll();
