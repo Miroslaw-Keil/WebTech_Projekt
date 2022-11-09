@@ -18,12 +18,6 @@ public class TestRestController {
     @Autowired
     TestService testService;
 
-/*
-    public TestRestController(TestService testService) {
-        this.testService = testService;
-    }
-*/
-
     @GetMapping(path = "/api/v1/tests")
     public ResponseEntity<List<Test>> fetchTests() {
        return ResponseEntity.ok(testService.findAll()); }

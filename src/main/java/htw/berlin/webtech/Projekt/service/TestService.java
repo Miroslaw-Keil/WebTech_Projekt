@@ -17,10 +17,6 @@ public class TestService {
     @Autowired
     ITestRepository testRepository;
 
-/*    public TestService(ITestRepository testRepository) {
-        this.testRepository = testRepository;
-    }
-*/
 
     public List<Test> findAll() {
         List<TestEntity> tests = testRepository.findAll();
@@ -28,6 +24,10 @@ public class TestService {
                 .map(this::transformEntity)
 
                 .collect(Collectors.toList());
+    }
+
+    public TestEntity save(TestEntity testEntity) {
+        return testRepository.save(testEntity);
     }
 
     public Test create(TestCreateOrUpdateRequest request){
