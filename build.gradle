@@ -21,7 +21,8 @@ dependencies {
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	runtimeOnly 'org.postgresql:postgresql'
-
+	testImplementation 'org.springframework.boot:spring-boot-starter-test:2.7.5'
+	testImplementation 'com.h2database:h2:1.4.200'
 }
 
 tasks.named('test') {
