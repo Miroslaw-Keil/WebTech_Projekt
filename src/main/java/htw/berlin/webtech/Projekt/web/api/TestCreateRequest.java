@@ -1,45 +1,18 @@
-package htw.berlin.webtech.Projekt.persistence;
+package htw.berlin.webtech.Projekt.web.api;
 
+public class TestCreateRequest {
 
-import javax.persistence.*;
-
-
-@Entity
-public class TestEntity {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
-    private long id;
-
-    @Column(name = "name")
     private String name;
+    private int zubereitungsdauer;
+    private boolean vegan;
+    private String tageszeit;
 
-    @Column(name = "zubereitungsdauer")
-    int zubereitungsdauer;
-
-    @Column(name = "vegan", nullable = false)
-    boolean vegan;
-
-    @Column(name = "tageszeit")
-    String tageszeit;
-
-    public TestEntity(String name, int zubereitungsdauer, boolean vegan, String tageszeit) {
-
+    public TestCreateRequest(String name, int zubereitungsdauer, boolean vegan, String tageszeit) {
         this.name = name;
         this.zubereitungsdauer = zubereitungsdauer;
         this.vegan = vegan;
         this.tageszeit = tageszeit;
     }
-
-    protected TestEntity() {
-
-    }
-
-    public long getId() {
-        return id;
-    }
-
 
     public String getName() {
         return name;
@@ -72,5 +45,4 @@ public class TestEntity {
     public void setTageszeit(String tageszeit) {
         this.tageszeit = tageszeit;
     }
-
 }
