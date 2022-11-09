@@ -21,4 +21,4 @@ jobs:
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
     - name: Run Backend Tests
-      run: java/htw/berlin/webtech/Projekt/ProjektApplicationTests.java
+      run: .gradlew/test
