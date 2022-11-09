@@ -1,8 +1,6 @@
 package htw.berlin.webtech.Projekt.web.api;
 
-import java.io.File;
-
-public class Test {
+public class Gericht {
 
     private long id;
     private String name;
@@ -10,7 +8,7 @@ public class Test {
     private boolean vegan;
     private String tageszeit;
 
-    public Test(long id, String name, int zubereitungsdauer, boolean vegan, String tageszeit) {
+    public Gericht(long id, String name, int zubereitungsdauer, boolean vegan, String tageszeit) {
         this.id = id;
         this.name = name;
         this.zubereitungsdauer = zubereitungsdauer;

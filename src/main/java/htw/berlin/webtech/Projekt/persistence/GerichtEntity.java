@@ -5,7 +5,7 @@ import javax.persistence.*;
 
 
 @Entity
-public class TestEntity {
+public class GerichtEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -24,7 +24,7 @@ public class TestEntity {
     @Column(name = "tageszeit")
     String tageszeit;
 
-    public TestEntity(String name, int zubereitungsdauer, boolean vegan, String tageszeit) {
+    public GerichtEntity(String name, int zubereitungsdauer, boolean vegan, String tageszeit) {
 
         this.name = name;
         this.zubereitungsdauer = zubereitungsdauer;
@@ -32,7 +32,7 @@ public class TestEntity {
         this.tageszeit = tageszeit;
     }
 
-    protected TestEntity() {
+    protected GerichtEntity() {
 
     }
 
