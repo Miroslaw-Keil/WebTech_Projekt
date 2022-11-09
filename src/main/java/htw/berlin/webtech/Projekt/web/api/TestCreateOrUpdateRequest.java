@@ -1,13 +1,13 @@
 package htw.berlin.webtech.Projekt.web.api;
 
-public class TestCreateRequest {
+public class TestCreateOrUpdateRequest {
 
     private String name;
     private int zubereitungsdauer;
     private boolean vegan;
     private String tageszeit;
 
-    public TestCreateRequest(String name, int zubereitungsdauer, boolean vegan, String tageszeit) {
+    public TestCreateOrUpdateRequest(String name, int zubereitungsdauer, boolean vegan, String tageszeit) {
         this.name = name;
         this.zubereitungsdauer = zubereitungsdauer;
         this.vegan = vegan;
