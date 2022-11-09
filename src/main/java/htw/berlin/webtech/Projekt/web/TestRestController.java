@@ -43,7 +43,7 @@ public class TestRestController {
 
     @DeleteMapping(path = "api/v1/tests/{id}")
     public ResponseEntity<Void> deleteTest(@PathVariable Long id) {
-        boolean succesful = testService.deleteById(id);
-        return succesful? ResponseEntity.ok().build() : ResponseEntity.notFound().build();
+        boolean successful = testService.deleteById(id);
+        return successful? ResponseEntity.ok().build() : ResponseEntity.notFound().build();
     }
 }
