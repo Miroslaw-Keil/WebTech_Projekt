@@ -17,7 +17,7 @@ public class GerichtRestController {
 
     @Autowired
     GerichtService gerichtService;
-
+// Lol
     @GetMapping(path = "/api/v1/gerichte")
     public ResponseEntity<List<Gericht>> fetchGerichte() {
        return ResponseEntity.ok(gerichtService.findAll()); }
