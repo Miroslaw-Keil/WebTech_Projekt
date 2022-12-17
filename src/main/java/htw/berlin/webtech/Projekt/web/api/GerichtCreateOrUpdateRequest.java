@@ -14,6 +14,8 @@ public class GerichtCreateOrUpdateRequest {
         this.tageszeit = tageszeit;
     }
 
+    public GerichtCreateOrUpdateRequest() {}
+
     public String getName() {
         return name;
     }
