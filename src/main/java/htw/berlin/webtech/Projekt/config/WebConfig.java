@@ -14,7 +14,7 @@ public class WebConfig implements WebMvcConfigurer {
         registry.addMapping("/api/**")
                 .allowedMethods("*")
                 .allowedOrigins(
-                        "http://192.168.178.27:3000",
+                        "https://miroslaw-keil.github.io/WebTech_Projekt_Frontend/",
                         "http://localhost:3000"
         );
     }
