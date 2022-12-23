@@ -66,6 +66,13 @@ public class GerichtService {
         return gerichtEntity.map(this::transformEntity).orElse(null);
     }
 
+    public List<Gericht> findByName(String name) {
+        var gerichtEntity = gerichtRepository.findAllByName(name);
+        return gerichtEntity.stream()
+                .map(this::transformEntity)
+                .collect(Collectors.toList());
+    }
+
     private Gericht transformEntity(GerichtEntity gerichtEntity) {
         return new Gericht(
                 gerichtEntity.getId(),

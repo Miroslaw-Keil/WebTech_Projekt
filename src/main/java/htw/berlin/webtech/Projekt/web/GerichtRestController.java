@@ -28,6 +28,12 @@ public class GerichtRestController {
         return gericht != null? ResponseEntity.ok(gericht) : ResponseEntity.notFound().build();
     }
 
+    @GetMapping(path = "/api/v1/gerichte/name/{name}")
+    public ResponseEntity<List<Gericht>> fetchGerichtByName(@PathVariable String name){
+        var gericht = gerichtService.findByName(name);
+        return gericht != null? ResponseEntity.ok(gericht) : ResponseEntity.notFound().build();
+    }
+
     @PostMapping(path = "/api/v1/gerichte")
     public ResponseEntity<Void> createGericht(@RequestBody GerichtCreateOrUpdateRequest request) throws URISyntaxException {
         var gericht = gerichtService.create(request);
