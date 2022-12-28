@@ -31,7 +31,7 @@ public class GerichtService {
     }
 
     public Gericht create(GerichtCreateOrUpdateRequest request){
-        var gerichtEntity= new GerichtEntity(request.getName(), request.getZubereitungsdauer(), request.isVegan(), request.getTageszeit());
+        var gerichtEntity= new GerichtEntity(request.getName(), request.getZubereitungsdauer(), request.isVegan(), request.getTageszeit(), request.getCounter);
         gerichtEntity = gerichtRepository.save(gerichtEntity);
         return transformEntity(gerichtEntity);
     }
@@ -47,6 +47,7 @@ public class GerichtService {
         gerichtEntity.setTageszeit(request.getTageszeit());
         gerichtEntity.setVegan(request.isVegan());
         gerichtEntity.setZubereitungsdauer(request.getZubereitungsdauer());
+        gerichtEntity.setCounter(request.getCounter());
         gerichtRepository.save(gerichtEntity);
 
         return transformEntity(gerichtEntity);
@@ -79,7 +80,8 @@ public class GerichtService {
                 gerichtEntity.getName(),
                 gerichtEntity.getZubereitungsdauer(),
                 gerichtEntity.isVegan(),
-                gerichtEntity.getTageszeit()
+                gerichtEntity.getTageszeit(),
+                gerichtEntity.getCounter()
 
         );
     }

@@ -7,11 +7,14 @@ public class GerichtCreateOrUpdateRequest {
     private boolean vegan;
     private String tageszeit;
 
-    public GerichtCreateOrUpdateRequest(String name, int zubereitungsdauer, boolean vegan, String tageszeit) {
+    private int counter;
+
+    public GerichtCreateOrUpdateRequest(String name, int zubereitungsdauer, boolean vegan, String tageszeit, int counter) {
         this.name = name;
         this.zubereitungsdauer = zubereitungsdauer;
         this.vegan = vegan;
         this.tageszeit = tageszeit;
+        this.counter = counter;
     }
 
     public GerichtCreateOrUpdateRequest() {}
@@ -47,4 +50,8 @@ public class GerichtCreateOrUpdateRequest {
     public void setTageszeit(String tageszeit) {
         this.tageszeit = tageszeit;
     }
+
+    public int getCounter() {return counter;}
+
+    public void setCounter(int counter) { this.counter = counter; }
 }
