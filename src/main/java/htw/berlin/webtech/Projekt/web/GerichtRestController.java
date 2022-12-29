@@ -17,7 +17,7 @@ public class GerichtRestController {
 
     @Autowired
     GerichtService gerichtService;
-// Lol
+
     @GetMapping(path = "/api/v1/gerichte")
     public ResponseEntity<List<Gericht>> fetchGerichte() {
        return ResponseEntity.ok(gerichtService.findAll()); }
@@ -37,7 +37,7 @@ public class GerichtRestController {
     @PostMapping(path = "/api/v1/gerichte")
     public ResponseEntity<Void> createGericht(@RequestBody GerichtCreateOrUpdateRequest request) throws URISyntaxException {
         var gericht = gerichtService.create(request);
-        URI uri = new URI("api/v1/gerichte" + gericht.getId());
+        URI uri = new URI("/api/v1/gerichte/" + gericht.getId());
         return ResponseEntity.created(uri).build();
     }
 

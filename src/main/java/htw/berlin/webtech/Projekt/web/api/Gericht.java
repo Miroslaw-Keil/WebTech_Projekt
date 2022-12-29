@@ -2,20 +2,22 @@ package htw.berlin.webtech.Projekt.web.api;
 
 public class Gericht {
 
-    private int counter;
+//    private int counter;
     private long id;
     private String name;
     private int zubereitungsdauer;
     private boolean vegan;
     private String tageszeit;
 
-    public Gericht(long id, String name, int zubereitungsdauer, boolean vegan, String tageszeit, int counter) {
+    public Gericht(long id, String name, int zubereitungsdauer, boolean vegan, String tageszeit
+//                   int counter
+    ) {
         this.id = id;
         this.name = name;
         this.zubereitungsdauer = zubereitungsdauer;
         this.vegan = vegan;
         this.tageszeit = tageszeit;
-        this.counter = counter;
+//        this.counter = counter;
     }
 
     public long getId() { return id; }
@@ -40,5 +42,5 @@ public class Gericht {
 
     public int getCounter(int counter) {return counter;}
 
-    public void setCounter(int counter) { this.counter = counter; }
+//    public void setCounter(int counter) { this.counter = counter; }
 }

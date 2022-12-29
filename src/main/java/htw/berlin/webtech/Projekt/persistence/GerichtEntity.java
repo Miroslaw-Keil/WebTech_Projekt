@@ -24,16 +24,18 @@ public class GerichtEntity {
     @Column(name = "tageszeit")
     String tageszeit;
 
-    @Column(name = "counter")
-    int counter;
+//    @Column(name = "counter")
+//    int counter;
 
-    public GerichtEntity(String name, int zubereitungsdauer, boolean vegan, String tageszeit, int counter) {
+    public GerichtEntity(String name, int zubereitungsdauer, boolean vegan, String tageszeit
+//                         int counter
+    ) {
 
         this.name = name;
         this.zubereitungsdauer = zubereitungsdauer;
         this.vegan = vegan;
         this.tageszeit = tageszeit;
-        this.counter = counter;
+//        this.counter = counter;
     }
 
     protected GerichtEntity() {
@@ -77,8 +79,8 @@ public class GerichtEntity {
         this.tageszeit = tageszeit;
     }
 
-    public int getCounter() {return counter;}
-
-    public void setCounter(int counter) { this.counter = counter; }
+//    public int getCounter() {return counter;}
+//
+//    public void setCounter(int counter) { this.counter = counter; }
 
 }
