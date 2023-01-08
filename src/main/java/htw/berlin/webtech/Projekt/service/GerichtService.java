@@ -49,7 +49,6 @@ public class GerichtService {
         gerichtEntity.setTageszeit(request.getTageszeit());
         gerichtEntity.setVegan(request.isVegan());
         gerichtEntity.setZubereitungsdauer(request.getZubereitungsdauer());
-//        gerichtEntity.setCounter(request.getCounter());
         gerichtRepository.save(gerichtEntity);
 
         return transformEntity(gerichtEntity);
@@ -83,7 +82,6 @@ public class GerichtService {
                 gerichtEntity.getZubereitungsdauer(),
                 gerichtEntity.isVegan(),
                 gerichtEntity.getTageszeit()
-//                gerichtEntity.getCounter()
 
         );
     }

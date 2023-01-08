@@ -51,7 +51,4 @@ public class GerichtCreateOrUpdateRequest {
         this.tageszeit = tageszeit;
     }
 
-//    public int getCounter() {return counter;}
-//
-//    public void setCounter(int counter) { this.counter = counter; }
 }

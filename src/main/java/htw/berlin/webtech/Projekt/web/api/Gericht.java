@@ -42,5 +42,4 @@ public class Gericht {
 
     public int getCounter(int counter) {return counter;}
 
-//    public void setCounter(int counter) { this.counter = counter; }
 }
